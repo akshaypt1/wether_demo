@@ -1,19 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cool Weather Widget</title>
+    <link rel="stylesheet" href="{% static 'css/indexx.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('../images/OIP.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .weather-widget {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+        
+        .weather-info {
+            margin-bottom: 20px;
+        }
+        
+        .weather-info h2 {
+            font-size: 1.5rem;
+        }
+        
+        .weather-info p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        
+        .temperature {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .time-info {
+            background: #008CBA;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .time {
+            font-size: 1.5rem;
+        }
+        
+        .date {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        
+        .forecast .hour {
+            margin: 0 5px;
+        }</style>
 </head>
-
 <body>
-   
-     
+    <div class="container">
+        <h1 class="title">COOL WEATHER WIDGET</h1>
+        <div class="weather-widget">
+            <div class="weather-info">
+                <h2>London</h2>
+                <p>Cloudy</p>
+                <div class="temperature">10°C</div>
+            </div>
+            <div class="time-info">
+                <div class="time">11:11:41</div>
+                <div class="date">Friday, January 03, 2025</div>
+            </div>
+            <div class="forecast">
+                <div class="hour">
+                    <p>10 AM</p>
+                    <p>15°C</p>
+                    <p>Cloudy</p>
+                </div>
+                <div class="hour">
+                    <p>11 AM</p>
+                    <p>16°C</p>
+                    <p>Cloudy</p>
+                </div>
+                <div class="hour">
+                    <p>12 PM</p>
+                    <p>18°C</p>
+                    <p>Rainy</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
