@@ -88,12 +88,12 @@
         <div class="weather-widget">
             <div class="weather-info">
                 <h2>{{data.city}}</h2>
-                <p>Cloudy</p>
-                <div class="temperature">10°C</div>
+                <p>{{data.weather_description}}</p>
+                <div class="temperature">{{data.temperature_celsius}}</div>
             </div>
             <div class="time-info">
-                <div class="time">11:11:41</div>
-                <div class="date">Friday, January 03, 2025</div>
+                <div class="time"></div>
+                <div class="date">{{data.date}}</div>
             </div>
             <div class="forecast">
                 <div class="hour">
